@@ -1,9 +1,9 @@
-package br.com.manual_pdf.utils;
+package br.com.dl.dlmanual.utils;
 
 /**
  * Created by Álisson Morais on 23/03/2017.
  */
 public interface Executable {
-    void onPermissionGranted();
-    void onPermissionDenied();
+    void onPermissionGranted(int requestCode);
+    void onPermissionDenied(int requestCode);
 }

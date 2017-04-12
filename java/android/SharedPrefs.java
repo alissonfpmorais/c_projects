@@ -1,4 +1,4 @@
-package br.com.manual_pdf.utils;
+package br.com.dl.dlmanual.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
