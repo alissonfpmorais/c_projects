@@ -1,5 +1,3 @@
-package br.com.dl.dlmanual.utils;
-
 import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
