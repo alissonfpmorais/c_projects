@@ -1,5 +1,3 @@
-package br.com.dl.dlmanual.utils;
-
 /**
  * Created by Álisson Morais on 23/03/2017.
  */
