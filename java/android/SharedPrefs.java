@@ -1,5 +1,3 @@
-package br.com.dl.dlmanual.utils;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 
