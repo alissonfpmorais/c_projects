@@ -1,5 +1,3 @@
-package br.com.dl.dlmanual.utils;
-
 import java.io.File;
 
 /**
