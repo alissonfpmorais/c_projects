@@ -13,7 +13,7 @@ public class Permission implements ActivityCompat.OnRequestPermissionsResultCall
     /**
      * Store the object that requested permission
      */
-    private Executable executable;
+    private Permittable permittable;
 
     /**
      * Permission ID for permission result
@@ -21,8 +21,8 @@ public class Permission implements ActivityCompat.OnRequestPermissionsResultCall
     private int requestCode;
 
     // Constructor
-    public Permission(Executable executable) {
-        this.executable = executable;
+    public Permission(Permittable permittable) {
+        this.permittable = permittable;
     }
 
     /**
@@ -45,7 +45,7 @@ public class Permission implements ActivityCompat.OnRequestPermissionsResultCall
                     new String[]{ permissionName }, this.requestCode);
         } else {
             // Execute onPermissionGranted from the requester
-            executable.onPermissionGranted(requestCode);
+            permittable.onPermissionGranted(requestCode);
         }
     }
 
@@ -60,10 +60,10 @@ public class Permission implements ActivityCompat.OnRequestPermissionsResultCall
             if (grantResults.length > 0
                     && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 // Execute onPermissionGranted from the requester
-                executable.onPermissionGranted(requestCode);
+                permittable.onPermissionGranted(requestCode);
             } else {
                 // Execute onPermissionDenied from the requester
-                executable.onPermissionDenied(requestCode);
+                permittable.onPermissionDenied(requestCode);
             }
         }
     }
